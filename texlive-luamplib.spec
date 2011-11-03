@@ -1,3 +1,9 @@
+# revision 23137
+# category Package
+# catalog-ctan /macros/luatex/generic/luamplib
+# catalog-date 2011-06-24 01:15:22 +0200
+# catalog-license pd
+# catalog-version 1.08
 Name:		texlive-luamplib
 Version:	1.08
 Release:	1
@@ -48,6 +54,7 @@ library. The facility is only available in PDF mode.
 #- source
 %doc %{_texmfdistdir}/source/luatex/luamplib/Makefile
 %doc %{_texmfdistdir}/source/luatex/luamplib/luamplib.dtx
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ library. The facility is only available in PDF mode.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
