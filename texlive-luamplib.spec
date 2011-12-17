@@ -1,11 +1,11 @@
-# revision 23137
+# revision 24823
 # category Package
 # catalog-ctan /macros/luatex/generic/luamplib
-# catalog-date 2011-06-24 01:15:22 +0200
+# catalog-date 2011-12-11 18:44:11 +0100
 # catalog-license pd
-# catalog-version 1.08
+# catalog-version 1.09
 Name:		texlive-luamplib
-Version:	1.08
+Version:	1.09
 Release:	1
 Summary:	Use LuaTeX's built-in MetaPost interpreter
 Group:		Publishing
@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The package enables the user to directly incorporate MetaPost
@@ -28,19 +25,19 @@ diagrams into a document, using LuaTeX's built-in MetaPost
 library. The facility is only available in PDF mode.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
