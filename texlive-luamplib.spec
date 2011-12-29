@@ -24,16 +24,8 @@ The package enables the user to directly incorporate MetaPost
 diagrams into a document, using LuaTeX's built-in MetaPost
 library. The facility is only available in PDF mode.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -52,7 +44,6 @@ library. The facility is only available in PDF mode.
 #- source
 %doc %{_texmfdistdir}/source/luatex/luamplib/Makefile
 %doc %{_texmfdistdir}/source/luatex/luamplib/luamplib.dtx
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -63,5 +54,3 @@ library. The facility is only available in PDF mode.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
