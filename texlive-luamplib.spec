@@ -54,3 +54,21 @@ library. The facility is only available in PDF mode.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.09-2
++ Revision: 753587
+- Rebuild to reduce used resources
+
+* Sat Dec 17 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.09-1
++ Revision: 743295
+- texlive-luamplib
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.08-1
++ Revision: 718926
+- texlive-luamplib
+- texlive-luamplib
+- texlive-luamplib
+- texlive-luamplib
+
