@@ -1,12 +1,12 @@
-# revision 24823
+# revision 31747
 # category Package
 # catalog-ctan /macros/luatex/generic/luamplib
-# catalog-date 2011-12-11 18:44:11 +0100
+# catalog-date 2013-09-24 18:25:21 +0200
 # catalog-license pd
-# catalog-version 1.09
+# catalog-version 2.01
 Name:		texlive-luamplib
-Version:	1.09
-Release:	2
+Version:	2.01
+Release:	1
 Summary:	Use LuaTeX's built-in MetaPost interpreter
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luamplib
@@ -54,21 +54,3 @@ library. The facility is only available in PDF mode.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.09-2
-+ Revision: 753587
-- Rebuild to reduce used resources
-
-* Sat Dec 17 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.09-1
-+ Revision: 743295
-- texlive-luamplib
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.08-1
-+ Revision: 718926
-- texlive-luamplib
-- texlive-luamplib
-- texlive-luamplib
-- texlive-luamplib
-
