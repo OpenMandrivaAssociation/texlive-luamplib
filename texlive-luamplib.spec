@@ -6,7 +6,7 @@
 # catalog-version 2.01
 Name:		texlive-luamplib
 Version:	2.01
-Release:	4
+Release:	5
 Summary:	Use LuaTeX's built-in MetaPost interpreter
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luamplib
