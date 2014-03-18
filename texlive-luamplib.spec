@@ -1,11 +1,11 @@
-# revision 32862
+# revision 33135
 # category Package
 # catalog-ctan /macros/luatex/generic/luamplib
-# catalog-date 2014-02-03 08:01:45 +0100
+# catalog-date 2014-03-09 20:09:33 +0100
 # catalog-license gpl2
-# catalog-version 2.4
+# catalog-version 2.6.0
 Name:		texlive-luamplib
-Version:	2.40
+Version:	2.60
 Release:	1
 Summary:	Use LuaTeX's built-in MetaPost interpreter
 Group:		Publishing
