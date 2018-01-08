@@ -5,7 +5,7 @@
 # catalog-license gpl2
 # catalog-version 2.6.1
 Name:		texlive-luamplib
-Version:	2.12.1
+Version:	2.12.2
 Release:	1
 Summary:	Use LuaTeX's built-in MetaPost interpreter
 Group:		Publishing
