@@ -1,19 +1,13 @@
-# revision 34021
-# category Package
-# catalog-ctan /macros/luatex/generic/luamplib
-# catalog-date 2014-03-28 14:02:48 +0100
-# catalog-license gpl2
-# catalog-version 2.6.1
 Name:		texlive-luamplib
-Version:	2.20.1
+Version:	61587
 Release:	1
 Summary:	Use LuaTeX's built-in MetaPost interpreter
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luamplib
 License:	GPL2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ diagrams into a document, using LuaTeX's built-in MetaPost
 library. The facility is only available in PDF mode.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -47,7 +41,8 @@ library. The facility is only available in PDF mode.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
