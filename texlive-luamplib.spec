@@ -1,6 +1,6 @@
 Name:		texlive-luamplib
 Version:	61587
-Release:	1
+Release:	2
 Summary:	Use LuaTeX's built-in MetaPost interpreter
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luamplib
