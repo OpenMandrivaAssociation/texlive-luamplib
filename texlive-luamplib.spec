@@ -1,5 +1,5 @@
 Name:		texlive-luamplib
-Version:	71698
+Version:	71939
 Release:	1
 Summary:	Use LuaTeX's built-in MetaPost interpreter
 Group:		Publishing
