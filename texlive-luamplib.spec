@@ -3,7 +3,7 @@ Version:	71964
 Release:	1
 Summary:	Use LuaTeX's built-in MetaPost interpreter
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/luatex/generic/luamplib
+URL:		https://www.ctan.org/tex-archive/macros/luatex/generic/luamplib
 License:	GPL2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.doc.r%{version}.tar.xz
