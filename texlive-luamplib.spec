@@ -1,51 +1,24 @@
-Name:		texlive-luamplib
-Version:	77524
-Release:	1
-Summary:	Use LuaTeX's built-in MetaPost interpreter
+%global tl_name luamplib
+%global tl_revision 79631
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2.42.3
+Release:	%{tl_revision}.1
+Summary:	Use LuaTeXs built-in MetaPost interpreter
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/luatex/generic/luamplib
-License:	GPL2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.source.r%{version}.tar.xz
+License:	gpl2
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package enables the user to directly incorporate MetaPost
-diagrams into a document, using LuaTeX's built-in MetaPost
-library. The facility is only available in PDF mode.
+The package enables the user to specify MetaPost diagrams (which may
+include colour specifications from the color or xcolor packages) into a
+document, using LuaTeX's built-in MetaPost library. The facility is only
+available in PDF mode.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/luatex/luamplib/luamplib.lua
-%{_texmfdistdir}/tex/luatex/luamplib/luamplib.sty
-%doc %{_texmfdistdir}/doc/luatex/luamplib/NEWS
-%doc %{_texmfdistdir}/doc/luatex/luamplib/README
-%doc %{_texmfdistdir}/doc/luatex/luamplib/luamplib.pdf
-%doc %{_texmfdistdir}/doc/luatex/luamplib/test-luamplib-latex.tex
-%doc %{_texmfdistdir}/doc/luatex/luamplib/test-luamplib-plain.tex
-#- source
-%doc %{_texmfdistdir}/source/luatex/luamplib/Makefile
-%doc %{_texmfdistdir}/source/luatex/luamplib/luamplib.dtx
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
