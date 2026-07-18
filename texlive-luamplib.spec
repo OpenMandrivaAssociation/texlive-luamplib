@@ -1,9 +1,9 @@
 %global tl_name luamplib
-%global tl_revision 79631
+%global tl_revision 79640
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	2.42.3
+Version:	2.42.4
 Release:	%{tl_revision}.1
 Summary:	Use LuaTeXs built-in MetaPost interpreter
 Group:		Publishing
