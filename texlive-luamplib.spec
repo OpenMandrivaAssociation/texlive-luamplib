@@ -1,9 +1,10 @@
 %global tl_name luamplib
-%global tl_revision 79640
+%global tl_revision 79944
+%global tl_version 2.42.6
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	2.42.4
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	Use LuaTeXs built-in MetaPost interpreter
 Group:		Publishing
@@ -14,7 +15,7 @@ Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.doc.r%{
 Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/luamplib.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 The package enables the user to specify MetaPost diagrams (which may
